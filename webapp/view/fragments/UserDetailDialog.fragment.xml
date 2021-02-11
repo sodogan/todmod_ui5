@@ -1,0 +1,24 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+        <Dialog id="userDetailDialog" title="User Details" type="Message" contentWidth="50%">
+		<content>
+	       <FlexBox direction="Column" class="sapUiSmallMargin">
+            <Title text="{parts:[{path:'templateName'} , {path:'businessAreaName'}]}" titleStyle="H2"/>
+            <FlexBox direction="Column" class="sapUiSmallMargin">
+                <FlexBox id='innerFlexFragmentMimListDialog' direction="Column" class="sapUiSmallMarginBegin">
+                <Title text="{firstName} {lastName}" titleStyle="H2"/>
+                    <Label text="Manager:{manager}" class="sapUiTinyMarginTop"/>
+                <!-- 	<ObjectStatus icon="sap-icon://call" title="Primary:" text="{mobileNumber}" state="Error" class="sapUiMediumMarginTop"/> 
+                    <ObjectStatus icon="sap-icon://call" title="Second" text="{backupMobileNumber}" state="Warning" class="sapUiTinyMarginTop"/> -->
+                    <Button id='oBtnPrimaryMim' type='Transparent' icon="sap-icon://call"  class="sapUiSmallMarginTop" text="{mobileNumber}"  tooltip="Call" press=".onTriggerPhoneCall"/>
+                    <Button id='oBtnSecondaryMim' type='Transparent' icon="sap-icon://call"  text="{backupMobileNumber}" class="myTest" tooltip="Call" press=".onTriggerPhoneCall"/>
+                  </FlexBox>
+                  </FlexBox>
+              </FlexBox>
+              </content>
+        <endButton>
+			<Button text="Close" press=".onCloseUserDetailDialog"/>
+		</endButton>
+    </Dialog>
+   </core:FragmentDefinition>
+
+
